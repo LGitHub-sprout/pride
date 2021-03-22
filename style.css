@@ -1,0 +1,345 @@
+/*
+Theme Name: Pride
+Theme URI: https://
+Author: eLDog
+Author URI: https://lsystemworks.com
+Description: New Description here.
+Version: 0.1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: pride
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------
+  Section comment block
+--------------------------------------*/
+
+/* Sub-section comment block
+/*--------------------------------------*/
+
+/*
+  Longer comments and detailed notes
+  Longer comments and detailed notes
+  Longer comments and detailed notes
+  Longer comments and detailed notes
+*/
+
+/*--------------------------------------------------------------
+>>> 2019 TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Variables
+# Normalize
+# Typography
+	## Headings
+	## Copy
+# Elements
+	## Lists
+	## Tables
+# Forms
+	## Buttons
+	## Fields
+# Navigation
+	## Links
+	## Menus
+	## Next & Previous
+# Accessibility
+# Alignments
+# Clearings
+# Layout
+# Widgets
+# Content
+	## Archives
+	## Posts and pages
+	## Comments
+# Blocks
+# Media
+	## Captions
+	## Galleries
+
+don't know where to put this:
+# Footer
+# Header
+
+--------------------------------------------------------------*/
+
+/* Normalize */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body, html {
+/**
+ * use overflow-y: auto; on elements whose content is cut off
+ * when using vh units
+ */
+  height: 100vh;
+  margin: 0;
+  /*border: solid 2px magenta;*/
+}
+a {
+  text-decoration: none;
+}
+
+/* Typography */
+body {
+  font-size: calc( 16px + 0.5vw );
+  line-height: calc( .5 + 0.5vw)
+}
+.entry-comments-meta,
+.entry-meta {
+  font-size: 95%;
+}
+/* Headings */
+h1.site-title a,
+p.site-title a {
+  font-size: 3rem;
+  color:lavender;
+}
+/*h2.entry-title {
+  text-align: center;
+  border-radius: 50px;
+  border: solid;
+  padding: 20px;
+  max-width: 300px;
+  margin: -30px auto 20px auto;
+  background: lavender;
+  color: linen;
+} */ 
+
+/* Alignments */
+figure.align-right {
+  /*float: right;*/
+  margin: 15px;
+  border: dotted 10px pink;
+  padding: 10px;
+}
+
+/* Clearings */
+.site-content:before,
+.site-content:after {
+  content: "";
+  display: table;
+}
+.site-content:after {
+  clear:both;
+}
+/* Layout */
+.site {
+  max-width: 1100px;
+  margin: -30px auto 50px auto;
+  padding: 0 20px 20px;
+  /*border: solid 2px black;*/
+}
+.site-header-menu {
+  /*float: right;*/
+}
+.site-branding, wp-custom-header {
+  /*clear: left;*/
+  /*position: bottom;*/
+}
+section#primary {
+  float:left;
+  max-width: 70%;
+  width: 70%;
+}
+
+/* Header Top Bar Widget */
+.custom-html-widget {
+  padding: 10px;
+  color: linen;
+  border-bottom: solid linen 1px;
+  text-align: center;
+}
+/* Header Navigation */
+.main-navigation {
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+#menu-primary-menu {
+  display: flex;
+  justify-content: space-around;
+}
+/* Navigation Links */
+.menu-item a {
+  color: linen;
+}
+ul li {
+  list-style: none;
+  justify-content: space-between;
+}
+button {
+  padding:5px;
+  margin-top: 10px;
+}
+
+/* Header */
+/* Site Branding */
+.custom-header {
+  height: 300px;
+  max-width: 100%;
+}
+.custom-logo {
+  display: inline-block;
+  margin-left: 15px;
+  margin-top: -20px;
+  margin-bottom: -40px;
+}
+.custom-logo a img {
+  border: solid 5px powderblue;
+  border-radius: 50px;
+}
+.site-header {
+  position: relative;
+  margin: 10px auto 50px auto;
+  /*border: solid 2px black;*/
+}
+.site-title, .site-description {
+  padding: 0 0 0 25px;
+}
+.site-description {
+  margin-top: -25px;
+  color: linen;
+}
+.site-branding {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+/* Header Image */
+.wp-custom-header img {
+  /*border: solid 5px red;*/
+  max-width: 100%;
+  height: auto;
+}
+.wp-custom-header {
+  position: relative;
+  margin-top: -300px;
+  z-index: -1;
+
+  /*background-position: center;*/
+  /*background-size: cover;*/
+  /*margin-left: calc( -50vw/2 + 50% );*/
+  /*margin-right: calc( -50vw/2 + 50% );*/
+  /*max-width: 100%;*/
+  /*height: auto;*/
+  /*border: solid 2px green;*/
+  /*width: 100vw;*/
+}
+.wp-custom-header::before {
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.2);
+  position: absolute;
+
+}
+/* Widgets */
+.right-sidebar {
+  float: right;
+  border: dashed 2px red;
+  padding: 1rem;
+  max-width: 25%;
+  background: white;
+  margin-left: 20px;
+}
+.admin-login li {
+  list-style: none;
+}
+
+/* Content */
+/* Posts and Pages */
+.related-posts {
+  border: dashed 5px lime;
+  background: linen;
+  padding: 0 20px 0 20px;
+}
+#page,
+.content-navigation {
+  background: lavender;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.featured {
+  text-transform: uppercase;
+  padding: 15px;
+  display: inline-block;
+  border: solid magenta 2px;
+}
+.entry-comments-meta {
+  margin: 0 0 20px 45px;
+}
+
+/* theme support for block editor
+    custom color
+*/
+.has-strong-magenta-color {
+  color: #a156b4;
+}
+/* Footer */
+.inside-site-footer {
+  background: lavender;
+  height: 30px;
+  padding: 20px 0 40px 0;
+  text-align: center;
+}
+
+
+
+/* Accessibility */
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
